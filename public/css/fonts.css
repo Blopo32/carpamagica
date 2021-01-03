@@ -1,0 +1,16 @@
+
+                                 /** FUENTES **/
+
+
+    /* fuente DroidSerif
+    una fuente normalita, usada por 
+    ejemplo para las letras normales 
+    de la pagina que no es negrita ni titulos, 
+    eficaz cuando es una letra pequeña*/
+
+@font-face {
+    font-family: "Droid";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/font/Droid.woff") format("woff"), url("/font/Droid.ttf") format("truetype");
+}

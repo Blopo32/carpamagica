@@ -1,0 +1,1057 @@
+/* 
+    Created on : 01-sep-2016, 16:24:33
+    Author     : Blopo
+*/
+
+
+
+                               /** ESTILO GLOBAL DE LA PAGINA COMO FUENTE Y ESTILO DEL BODY **/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    background-color: #6DA3FA;
+}
+
+html
+{
+    position: relative; 
+    min-height: 100%;
+    max-height: 100%;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+
+                       /* EMPIEZA ESTILO DEL NAV (MENU) DE LA PAGINA */
+
+nav {
+    
+    min-width: 1050px;
+    background-color: #6C69FD;
+    position: relative;
+    margin: 0 auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+
+nav ul{
+    width: 1050px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav li {
+    
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.18em;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: all 500ms ease;
+    
+    -khtml-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+nav li:hover{
+    background-color: #2411F0;
+}
+
+
+nav a{
+    outline: none;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+/* estilo de la barra de busqueda */
+#busqueda_container{
+
+    float: right;
+}
+
+#busqueda_container_container form{
+    
+    position: relative; 
+    margin: 3px 120px 0px 0px;
+}
+
+#busqueda_container_container input{
+
+
+    width: 150px;
+    border: 0;
+    font-size: 14px;
+    padding: 8px 35px 8px 8px;
+    float: left;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 5px;
+}
+
+#busqueda_container_container button:hover{
+
+    cursor: pointer;
+}
+
+#busqueda_container_container button{
+
+    display: block;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 0;
+    font-size: 12px;
+    color: #bbb;
+    background: none;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/* aqui termina el estilo del menu */
+
+
+
+
+
+                                     /* ESTILO DEL HEADER DE LA PAGINA CON EL TITULO EL LOGO Y EL LOGIN */
+
+
+
+#header_cuenta{
+    height: 100px;
+    width: 1050px;
+    margin: 0 auto;
+}
+
+
+
+#iconoHome{
+    margin-left: 3px;
+    float: left;
+}
+
+#titulo{
+    
+    float: left;
+    margin: 0 auto;
+    margin-left: 15px;
+}
+
+
+#eslogan{
+    
+    float:left;
+    margin: 0 auto;
+    font-size: 15px;
+    margin-top: 48px;
+    margin-left: 10px;
+    
+}
+                   
+
+
+
+         /* AQUI EMPIEZA EL ESTILO DEL LOGIN */
+
+
+#login{
+
+    position: relative;
+    margin-top: 40px;
+    float: right;
+    width: 380px;
+  
+}
+#login form p{
+
+    margin: 0;
+    display: inline-block;
+}
+
+#login form input[type=text], #login form input[type=password]{
+
+    width: 100px;
+    background: aliceblue;
+    padding-left: 8px;
+    padding-right: 5px;
+    height: 22px;
+    display: inline-block;
+    border-style: outset;
+    border-color: darkturquoise;
+    border-radius: 8px;
+    border-width: 3px;
+}
+
+#login form input[type=text]:focus, #login form input[type=password]:focus{
+
+  
+    background: white;  
+}
+
+
+#login form div input[type=submit]{
+
+    background: #2527B2;
+    text-align: center;
+    color: white;
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 2px;
+}
+
+#login form div input[type=submit]:hover{
+
+    cursor: pointer;
+}
+
+
+#login form{
+
+    float: right;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+
+
+#sin_cuenta{
+
+    font-family: serif;
+    padding-left: 8px;
+    font-size: 16dp;
+    font-size: 1.3em;
+    width: 100%;
+}
+
+
+
+
+                         /* LOGOUT */
+#logout{
+
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 25px;
+    float: right;
+}
+
+
+#perfil_name{
+
+    display: inline-block;
+    margin-right: 15px;
+}
+
+
+#perfil_name p{
+
+    margin: 0;
+    font-family: Droid;
+    font-size: 26px;
+    text-align: right;
+    width: 180px;
+}
+
+
+#welcome{
+
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+}
+
+#welcome img{
+
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+#form_logout{ display: inline-block; }
+
+#form_logout form{ padding: 0; }
+
+#form_logout form button{
+
+    background: transparent;
+    border: 0;
+    width: 60px;
+}
+
+#form_logout form button img{
+
+    width: 100%;
+    height: 100%;
+}
+
+#form_logout form button img:hover{ cursor: pointer; }
+
+
+/* estilo de los avatares */
+.avatarOption{
+
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin: 15px;
+}
+
+.avatarOption img{
+
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+
+
+
+                                     /** REGISTRO **/
+
+#prof{
+
+    width: 35%;
+    display: inline-block;
+    text-align: center;
+}
+
+#registro{
+
+    width: 60%;
+    float: right;
+}
+
+#registro form{}
+
+#registro input[type=text], #registro input[type=password]{ margin-left: 10px; }
+
+#registro p{}
+
+#registro h1{}
+
+#combogen{
+
+    margin-bottom: 15px;
+    width: 200px;
+    height: 25px;
+    font-size: 16px
+}
+
+#introHistoria{
+ 
+    font-size: 20px;
+    font-weight: bold;
+    margin: 2px 0px 2px 0px;
+}
+
+.introRegistro{
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.registroDatos{
+
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#confirmar_registro{
+
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+
+#error_registro{
+
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
+
+/*termina el estilo del login*/
+
+
+
+
+
+
+
+
+
+
+
+                                           /* ESTILO BASE DE LA PAGINA ( CLASES Y DIVS GENERICOS QUE SE USAN EN TODOS LADOS ) */
+
+.cont_base{
+
+    margin-top: 50px;
+}
+
+
+
+
+
+
+                                            /* ESTILOS DEL ENVIO DE APORTES POR EL USUARIO */
+
+
+
+
+#container_aporte_menu{
+
+    width: 1050px;
+    margin: 0 auto;
+}
+
+
+#menu_aporte{
+
+    margin-top: 25px;
+    margin-left: 30px;
+    position: absolute;
+}
+
+
+#menu_aporte li{ margin-bottom: 8px; }
+
+
+
+
+
+/*termina el estilo del envio de aportes*/
+
+
+
+
+
+ 
+
+
+
+                                               /* ESTILO DE LAS VIÑETAS ( ULTIMOS Y MEJORES ) */
+
+
+.ultimos_container{
+
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.main_contenido{ margin: 0px 315px 100px 22px; }
+
+.vinieta{ background: #C3E7F7; }
+
+.vinieta h1{
+
+    margin: 0;
+    padding: 25px 15px 10px 25px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+}
+
+/*informacion de la viñeta*/
+.info-vinieta{
+
+    margin-top: 10px;
+}
+
+#puntuar{
+
+}
+
+#div_comentar{
+
+    float: left;
+}
+
+#div_comentar p{
+
+    margin: 0;
+    padding: 10px 5px 0px 15px;
+    font-size: 46px;
+    text-align: center;
+    float: left;
+}
+
+#div_comentar a{
+
+    display: inline-block;
+    color: black;
+}
+
+#div_puntuacion{
+
+    float: left;
+    margin-left: 16%;
+}
+
+.boton-puntuar{
+
+    float: left;
+    background: transparent;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: white;
+    padding: 8px;
+}
+
+.boton-puntuar:hover{
+
+    background: white;
+    cursor: pointer;
+}
+
+#puntuacion{
+
+    float: left;
+    padding: 20px 10px 0px 10px;
+}
+
+#puntuacion p{
+
+    font-size: 36px;
+    margin: 0;
+}
+
+/* hasta aqui la informacion 
+   de la viñeta */
+
+
+/*imagen autor*/
+
+#datosAutor{
+
+    display: inline-block;
+    float: right;
+}
+
+#autorDatos{
+
+    display: inline-block;
+    padding-top: 15px;
+    font-size: 16px;
+}
+
+#autor-nombre{
+
+    height: 25px;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+#autor-fecha{
+
+    height: 25px;
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+#div_autor{
+
+    width: 75px;
+    height: 75px;
+    float: right;
+    margin-right: 5px;
+}
+
+#div_autor img{
+
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+
+/*imagen de la  viñeta*/
+
+.img-vinieta{
+
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+
+   /* estilo de las etiquetas */
+
+.cajon-etik{
+
+    text-align: center;
+    margin-top: 20px;
+    padding: 5px 10px 30px 10px;
+    margin-bottom: 150px;
+}
+
+#etiqueta{
+
+    display: inline-block;
+    padding: 5px 8px 5px 8px;
+    background: lightblue;
+    border-radius: 7px;
+    margin: 5px 5px 5px 5px;
+}
+
+#etiqueta p{
+
+    margin: 0;
+    font-family: Droid;
+    font-size: 11px;
+}
+
+
+
+
+
+                       /* PAGINACION */
+
+.paginacion{
+}
+
+.paginacion ul{
+
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    border-style: solid;
+    border-width: 1px 0px 1px 1px;
+    list-style-type: none;
+}
+.paginacion ul li{ display: inline-block; }
+
+.paginacion a{
+
+    text-decoration: none;
+    border-color: black;
+    font-size: 22px;
+    padding: 12px;
+    border-style: solid;
+    border-width: 0px 1px 0px 0px;
+}
+
+.pagina-enlace{
+
+    background: white;
+    color: black;
+}
+.pagina-enlace:hover{ background: lightblue; }
+
+.pagina-actual{
+
+    background: blue;
+    color: white;
+    cursor: default;
+}
+
+
+
+
+
+
+
+/* AQUI TERMINA EL ESTILO DE LAS VIÑETAS APORTES */   
+
+
+
+
+
+
+
+
+                                             /* ESTILO DEL CAJON DE COMENTARIOS DE LA PAGINA COMENTARIOS PARACOMENTAR VIÑETAS */
+
+/*div que guarda el cajon
+de los comentarios*/
+.cajon-comentarios{
+
+}
+
+/*cabecera que ordena
+los comenarios*/
+#cabecera-comentarios{
+
+    display: inline-block;
+    width: 100%;
+    font-weight: bold;
+}
+
+#cabecera-comentarios h1{
+
+    margin: 0;
+    display: inline-block;
+}
+
+#div-ordenar-comentarios{
+
+    display: inline-block;
+    float: right;
+}
+
+#div-ordenar-comentarios ul{
+
+    margin: 0;
+    list-style-type: none;
+    display: inline-block;
+    padding: 0;
+    font-size: 16px;
+    margin-right: 20px;
+    padding-top: 5px;
+}
+
+
+#div-ordenar-comentarios ul li{
+
+    display: inline-block; 
+    padding: 3px 5px 3px 5px;
+    border-radius: 3px;
+}
+
+
+
+.elegir-orden:hover{ background: goldenrod; }
+
+
+
+/*el estilo distinto para
+saber como esta actualmente
+ordenados los comentarios*/
+
+.orden-actual{ color: white; }
+.orden-elegir{ color: black; }
+
+
+
+
+                          /*lista de comentarios de la viñeta*/
+#listado-comentarios{
+
+    margin-top: 25px;
+}
+
+/*estilo de un comentario*/
+#comentario{
+
+    background: lavender;
+    border-radius: 0px 15px 15px 15px;
+    position: relative;
+    margin: 0px 0px 25px 0px;
+    padding: 10px 10px 5px 10px;
+}
+
+
+/*datos como el autor
+y la fecha de publicacion
+del comentario*/
+#presentacion-comentario{
+
+    margin-bottom: 15px;
+    height: 55px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    font-family: Droid;
+}
+
+#coment-autor{
+
+    width: 50px;
+    position: relative;
+    height: 50px;
+    border-radius: 1000px;
+    background-color: transparent;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#coment-autor img{
+
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+#comentario-datos{
+
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    margin-left: 5px;
+    padding-top: 5px;
+}
+
+#comentario-fecha{
+
+    height: 40%;
+}
+
+#comentario-orden{
+
+    height: 40%;
+}
+
+#comentario-orden p{
+
+    margin: 0;
+    display: inline-block;
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+#titulo-comentario{
+
+    display: inline-block;
+    position: relative;
+    margin-left: 15px;
+}
+
+#titulo-comentario h1{
+
+    margin: 0;
+    margin-top: 10px;
+}
+
+#coment-text{
+
+    padding: 0px 10px 10px 15px;
+    font-size: 14px;
+    font-family: Droid;
+}
+
+#coment-text textarea{
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-style: none;
+    outline: 0px;
+    max-width: 100%;
+    font-size: 14px;
+    font-family: Droid;
+    margin: 0px;
+    background: transparent;
+}
+
+/*after decorativo para
+que el div del comentario 
+parezca un bocadillo*/
+#comentario:before{
+
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: -11px;
+    left: -6px;
+    border-style: solid;
+    border-width: 15px 20px 15px 0px;
+    border-color: transparent lavender transparent transparent;
+    -ms-transform: rotate(20deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+
+              /* ESTILO PARA VOTOS DE COMENTARIOS */
+#coment-puntos{
+
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#coment-puntos a{ margin-right: 8px; }
+
+
+#coment-puntuacion-final{
+
+    display: inline-block;
+    font-size: 22px;
+    margin: 0;
+    font-weight: bold;
+    margin: 0px 10px 0px 10px;
+}
+#coment-puntuacion-final p{ margin: 0; }
+
+.puntuacion_negativa{ color: red; }
+
+.puntuacion_positiva{ color: green; }
+
+.votar-comentario{ width: 20px; }
+
+#coment-votos{ padding-top: 5px; }
+
+#coment-votos p{ margin: 0; font-size: 14px; }
+
+
+
+
+
+    
+
+               /* estilo para escribir nuevo comentario */
+
+
+#publica-comentario{ margin-top: 50px; }
+
+.enviar-comentario input{
+
+    border-style: none;
+    background: blue;
+    padding: 10px 10px 10px 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: Droid;
+    border-radius: 15px 5px 15px 5px;
+    /* margin-right: 40%; */
+    float: right;
+}
+
+
+.enviar-comentario input:hover{
+
+    cursor: pointer;
+    border-radius: 5px 5px 5px 5px;
+    
+}
+
+
+
+
+
+/* aqui termina el estilo de los comentarios */
+
+
+
+
+
+
+
+
+
+
+                                                      /* ESTILO DEL ENVIO DE APORTES */
+
+.container{
+
+    margin: 0 auto;
+    width: 950px;
+    background: lightblue;
+    padding: 15px 15px 15px 25px;
+    overflow: auto;
+}
+
+
+.container h1{
+
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 36px;
+}
+
+#objecion p{ font-size: 16px; }
+#objecion-añadido p{ font-size: 15px; }
+
+.container p{
+
+    margin: 0;
+    font-family: Droid;
+    font-size: 18px;
+    width: 95%;
+}
+
+
+#enviando{ margin-top: 45px; }
+#enviando form{ margin-bottom: 45px; }
+
+
+.entrada{
+
+    margin-bottom: 15px;
+}
+
+
+.entrada label{
+
+    display: block;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+
+.entrada input[type=text]{
+
+    width: 80%;
+    padding: 5px;
+    font-size: 16px;
+}
+
+
+.entrada output img{ width: 700px; }
+ 
+
+
+
+
+
+                 /* envio de imagenes y gift */
+                            
+
+
+
+.votadoPos{
+   
+    background: #FFD700;
+}
+
+.votadoNeg{
+
+    background: wheat;
+}
+
+
+
+
+
