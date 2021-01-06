@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExampleController;
 use App\Http\Controllers\UltimosController;
 use App\Http\Controllers\VinietasController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegistroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +18,27 @@ use App\Http\Controllers\VinietasController;
 |
 */
 
+
+/**
+ * Screen INICIO
+ */
 Route::get('/', function () {
     return view('index');
 });
 
+
+/**
+ * Login
+ */
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
+
+/**
+ * Screen REGISTRO
+ */
+Route::get('/signUp', [RegistroController::class, 'show']);
+Route::post('/signUp/createUser', [RegistroController::class, 'signUp']);
 
 
 /**
@@ -27,6 +46,3 @@ Route::get('/', function () {
  */
 Route::get('/ultimos', [UltimosController::class, 'show']);
 Route::get('/ultimos/{page}', [UltimosController::class, 'showPagination']);
-
-
-Route::get('/pruebaBD', [VinietasController::class, 'show']);

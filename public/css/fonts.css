@@ -12,5 +12,5 @@
     font-family: "Droid";
     font-style: normal;
     font-weight: normal;
-    src: url("/font/Droid.woff") format("woff"), url("/font/Droid.ttf") format("truetype");
+    src: url("font/Droid.woff") format("woff"), url("font/Droid.ttf") format("truetype");
 }

@@ -2,28 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Ultimos;
-use App\Models\Vinieta;
-use App\Utils\Util;
 use App\Utils\DDBB;
 
+
+/**
+ * Controlador de la pantalla: ULTIMOS
+ */
 class UltimosController extends Controller
 {
-    // first page
+    /**
+     * carga la pagina 1 de la pantalla ULTIMOS
+     */
     function show(){
 
-        // if no pagination is specified show the page 1
+        // if no pagination is specified, show the page 1
         return $this::showPagination(1);
     }
 
-    // specifique page of creen ultimos
+    
+    /**
+     * Carga la pantalla ULTIMOS en una pagina concreta
+     */
     function showPagination($page){
 
         // get vinietas from data base
         $listVinietas = DDBB::ultimosPagination($page);
 
-        // return view
+        // return view with the data to load
         return view("lista_vinietas", ["listaVinietas" => $listVinietas]);
     }
 }

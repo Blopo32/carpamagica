@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+
+/**
+ * Modelo de la tabla de usuarios por defecto de laravel
+ * Actualmente no se usa ni se usará probablemente
+ */
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
