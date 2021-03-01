@@ -226,6 +226,12 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        // util methods
+        'ConstSentences' => App\Utils\ConstSentences::class,
+        'ConstVar' => App\Utils\ConstVar::class,
+        'FileControl' => App\Utils\FileControl::class,
+        'PokeApiManager' => App\Utils\PokeApiManager::class,
+        'SessionControl' => App\Utils\SessionControl::class,
         'Util' => App\Utils\Util::class
 
     ],

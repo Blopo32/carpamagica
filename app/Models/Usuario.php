@@ -17,4 +17,8 @@ class Usuario extends Model
     // en un futuro lo ideal seria quitarla para que esto se hiciera
     // en la tabla "user" se puede ver el formato de esas columnas
     public $timestamps = false;
+
+    // le indicamos que estamos usando "cod" como primary key
+    // por defecto eloquent interpreta que la primary key es "id"
+    protected $primaryKey = 'cod';
 }

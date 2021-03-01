@@ -12,8 +12,21 @@
 
             @endforeach
 
+
+            @include('bloques.bloq_pagination', [$page, $totalPages, $routeUrl])
+
+
         </div>
     </div>
 
+@endsection()
+
+
+
+@section('aditionalScript')
+
 
 @endsection()
+
+
+

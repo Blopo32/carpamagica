@@ -123,7 +123,7 @@
   animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  
+
   /*-webkit-transform: rotate (45deg);
    -moz-transform: rotate (45deg);
    -o-transform: rotate (45deg);
@@ -139,7 +139,7 @@
 
 
 
-     /* ANIMACION DE DESPLAZAMIENTO PARA SEÑALAR    *** BUBBLE-FLOAT-LEFT *** */
+     /* ANIMACION DE DESPLAZAMIENTO PARA SEï¿½ALAR    *** BUBBLE-FLOAT-LEFT *** */
 
 
 
@@ -369,7 +369,7 @@
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  
+
   /*-webkit-transform: rotate (45deg);
    -moz-transform: rotate (45deg);
    -o-transform: rotate (45deg);
@@ -501,6 +501,9 @@ overflow: hidden;
 
 
 /*aqui termina la animacion que pone pokeballs en las esquinas de los divs*/
+
+
+
 
 
 

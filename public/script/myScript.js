@@ -1,24 +1,15 @@
-     /* funciones de prueba */
-
-function mostrarMensaje1(){
-alert('Bienvenido al curso JavaScript de aprenderaprogramar.com');
-}
-
-function mostrarMensaje2(){
-alert('Ha hecho click sobre el párrafo inferior');
-}
 
 
-                    /* previsualizar imagenes al seleccionarla para subirla */
+            /* previsualizar imagenes al seleccionarla para subirla */
 
 function previsualizar(evt) {
-    
+
     var files = evt.target.files; // FileList objeto
 
     // Obtenemos la imagen del campo "file".
     for (var i = 0, f; f = files[i]; i++) {
-        
-        //Solo admitimos imágenes.
+
+        //Solo admitimos imï¿½genes.
         if (!f.type.match('image.*')) {
             continue;
         }
@@ -36,14 +27,58 @@ function previsualizar(evt) {
     }
 }
 
-function votar($user, $voto, $vin){
-  
+
+/**
+ * Realiza una votacion del usuario logueado a la vinieta correspondiente
+ *
+ */
+function votar($vin, $voto){
+
+    $.ajax ({
+
+        url:    "/votar",                   /* URL a invocar asï¿½ncronamente */
+        type:   'post',                           /* Mï¿½todo utilizado para el requerimiento */
+        data:   {
+            vinieta: $vin,
+            voto: $voto
+        },    /* Informaciï¿½n local a enviarse con el requerimiento */
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success:    function(request, settings)
+        {
+            if(request != true){
+                $('#txt_puntos_' + $vin).html(request);
+            }else{
+
+                if($voto == 1){
+                    $('#button_plusle_' + $vin).css('background', '#FFD700');
+                }else{
+                    $('#button_minum_' + $vin).css('background', 'wheat');
+                }
+
+                // actualiza la puntuacion con tu voto (sin tener en cuenta si alguien mas ha votado entre medias)
+                $('#txt_puntos_' + $vin).html(parseInt($('#txt_puntos_' + $vin).html()) + $voto);
+            }
+        },
+        error:  function(request, settings)
+        {
+            $('#txt_puntos_' + $vin).html('Error');
+        }
+    });  // Fin de la invocaciï¿½n al mï¿½todo ajax
+
+}
+
+
+
+function votar2($user, $voto, $vin){
+
     if($user != 0){
         $.ajax ({
-            
-            url:    'control/votar.php',                   /* URL a invocar asíncronamente */
-            type:   'post',                           /* Método utilizado para el requerimiento */
-            data:   {user: $user, voto: $voto, vinieta: $vin},    /* Información local a enviarse con el requerimiento */
+
+            url:    'votar',                   /* URL a invocar asï¿½ncronamente */
+            type:   'post',                           /* Mï¿½todo utilizado para el requerimiento */
+            data:   {voto: $voto, vinieta: $vin},    /* Informaciï¿½n local a enviarse con el requerimiento */
             success:    function(request, settings)
             {
                 if(request == 'fail'){
@@ -62,6 +97,6 @@ function votar($user, $voto, $vin){
             {
                 $('#txt_puntos_' + $vin).html('Error: ');
             }
-        });  // Fin de la invocación al método ajax
-    } 
-}				
+        });  // Fin de la invocaciï¿½n al mï¿½todo ajax
+    }
+}

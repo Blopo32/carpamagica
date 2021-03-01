@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Session;
 
-use Request;
-use Illuminate\Support\Facades\Hash;
 use App\Models\Usuario;
-use App\Utils\ConstVar;
+use App\Utils\SessionControl;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 
 /**
@@ -17,16 +18,16 @@ class LoginController extends Controller
 
     /**
      * Inicia sesión en la aplicación
-     * 
+     *
      * POST
      * @param userName nick de usuario
      * @param pass password de usuario
      */
-    function login(){
+    function login(Request $request){
 
         // get params
-        $userName = Request::get('user');
-        $pass = Request::get('pass');
+        $userName = $request->get('user');
+        $pass = $request->get('pass');
 
 
         /** Parametros vacíos significa que solo navega a pantalla de login */
@@ -36,10 +37,10 @@ class LoginController extends Controller
 
 
         /** Check if user is already logged */
-        if(session()->has(ConstVar::SESSION_USER)){
+        if(SessionControl::isSessionActive()){
             return "AQUI DEBERIA CARGAR LA PANTALLA DE LOGIN CON MENSAJE DE ERROR DE QUE YA ESTA LOGUEADO";
         }
-        
+
 
         /** Check if user EXIST */
         // get data from database
@@ -54,7 +55,7 @@ class LoginController extends Controller
         }else{
 
             // adding session var
-            session()->put(ConstVar::SESSION_USER, $userFound->nick);
+            SessionControl::createSession($userFound->cod, $userFound->nick, $userFound->img_perfil);
 
             // redirect to the previus screen
             return redirect()->back();
@@ -65,14 +66,13 @@ class LoginController extends Controller
 
     /**
      * Cierra sesión en la aplicación
-     * 
+     *
      * POST
      */
     function logout(){
 
         // delete session vars
-        session()->forget(ConstVar::SESSION_USER);
-        session()->flush();
+        SessionControl::closeSession();
 
         // redirect to the previus screen
         return redirect()->back();

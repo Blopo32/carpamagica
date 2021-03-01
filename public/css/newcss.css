@@ -1,4 +1,4 @@
-/* 
+/*
     Created on : 01-sep-2016, 16:24:33
     Author     : Blopo
 */
@@ -16,7 +16,7 @@ body{
 
 html
 {
-    position: relative; 
+    position: relative;
     min-height: 100%;
     max-height: 100%;
 }
@@ -29,7 +29,7 @@ html, body {
                        /* EMPIEZA ESTILO DEL NAV (MENU) DE LA PAGINA */
 
 nav {
-    
+
     min-width: 1050px;
     background-color: #6C69FD;
     position: relative;
@@ -46,7 +46,7 @@ nav ul{
 }
 
 nav li {
-    
+
     display: inline-block;
     text-align: center;
     text-transform: uppercase;
@@ -59,7 +59,7 @@ nav li {
     padding-left: 15px;
     padding-right: 15px;
     transition: all 500ms ease;
-    
+
     -khtml-border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -87,8 +87,8 @@ nav a{
 }
 
 #busqueda_container_container form{
-    
-    position: relative; 
+
+    position: relative;
     margin: 3px 120px 0px 0px;
 }
 
@@ -156,7 +156,7 @@ nav a{
 }
 
 #titulo{
-    
+
     float: left;
     margin: 0 auto;
     margin-left: 15px;
@@ -164,15 +164,15 @@ nav a{
 
 
 #eslogan{
-    
+
     float:left;
     margin: 0 auto;
     font-size: 15px;
     margin-top: 48px;
     margin-left: 10px;
-    
+
 }
-                   
+
 
 
 
@@ -185,7 +185,7 @@ nav a{
     margin-top: 40px;
     float: right;
     width: 380px;
-  
+
 }
 #login form p{
 
@@ -209,8 +209,8 @@ nav a{
 
 #login form input[type=text]:focus, #login form input[type=password]:focus{
 
-  
-    background: white;  
+
+    background: white;
 }
 
 
@@ -279,7 +279,6 @@ nav a{
     width: 180px;
 }
 
-
 #welcome{
 
     display: inline-block;
@@ -294,6 +293,28 @@ nav a{
     margin-left: 10%;
     margin-top: 10%;
 }
+#welcome img:hover{
+
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+div.avatarOption img:hover{
+
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+div#div_autor img:hover{
+
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+
 
 #form_logout{ display: inline-block; }
 
@@ -367,7 +388,7 @@ nav a{
 }
 
 #introHistoria{
- 
+
     font-size: 20px;
     font-weight: bold;
     margin: 2px 0px 2px 0px;
@@ -459,11 +480,11 @@ nav a{
 
 
 
- 
 
 
 
-                                               /* ESTILO DE LAS VIÑETAS ( ULTIMOS Y MEJORES ) */
+
+                                               /* ESTILO DE LAS VIï¿½ETAS ( ULTIMOS Y MEJORES ) */
 
 
 .ultimos_container{
@@ -485,7 +506,7 @@ nav a{
     border-bottom-color: white;
 }
 
-/*informacion de la viñeta*/
+/*informacion de la viï¿½eta*/
 .info-vinieta{
 
     margin-top: 10px;
@@ -550,8 +571,8 @@ nav a{
     margin: 0;
 }
 
-/* hasta aqui la informacion 
-   de la viñeta */
+/* hasta aqui la informacion
+   de la viï¿½eta */
 
 
 /*imagen autor*/
@@ -602,7 +623,7 @@ nav a{
 }
 
 
-/*imagen de la  viñeta*/
+/*imagen de la  viï¿½eta*/
 
 .img-vinieta{
 
@@ -622,20 +643,43 @@ nav a{
     margin-bottom: 150px;
 }
 
-#etiqueta{
+.overEtiqueta{
 
     display: inline-block;
-    padding: 5px 8px 5px 8px;
     background: lightblue;
     border-radius: 7px;
     margin: 5px 5px 5px 5px;
 }
 
-#etiqueta p{
+/* over etiqueta */
+.overEtiqueta:hover{
+
+    background-color: #2411F0;
+}
+.overEtiqueta:hover a{
+
+    color: white;
+}
+
+
+.etiqueta{
+
+    display: inline-block;
+    padding: 5px 8px 5px 8px;
+}
+
+.etiqueta p{
 
     margin: 0;
     font-family: Droid;
     font-size: 11px;
+}
+
+.overEtiqueta a{
+
+    text-decoration: unset;
+    color: black;
+
 }
 
 
@@ -688,7 +732,7 @@ nav a{
 
 
 
-/* AQUI TERMINA EL ESTILO DE LAS VIÑETAS APORTES */   
+/* AQUI TERMINA EL ESTILO DE LAS VIï¿½ETAS APORTES */
 
 
 
@@ -697,7 +741,7 @@ nav a{
 
 
 
-                                             /* ESTILO DEL CAJON DE COMENTARIOS DE LA PAGINA COMENTARIOS PARACOMENTAR VIÑETAS */
+                                             /* ESTILO DEL CAJON DE COMENTARIOS DE LA PAGINA COMENTARIOS PARACOMENTAR VIï¿½ETAS */
 
 /*div que guarda el cajon
 de los comentarios*/
@@ -740,7 +784,7 @@ los comenarios*/
 
 #div-ordenar-comentarios ul li{
 
-    display: inline-block; 
+    display: inline-block;
     padding: 3px 5px 3px 5px;
     border-radius: 3px;
 }
@@ -761,7 +805,7 @@ ordenados los comentarios*/
 
 
 
-                          /*lista de comentarios de la viñeta*/
+                          /*lista de comentarios de la viï¿½eta*/
 #listado-comentarios{
 
     margin-top: 25px;
@@ -874,7 +918,7 @@ del comentario*/
 }
 
 /*after decorativo para
-que el div del comentario 
+que el div del comentario
 parezca un bocadillo*/
 #comentario:before{
 
@@ -928,7 +972,7 @@ parezca un bocadillo*/
 
 
 
-    
+
 
                /* estilo para escribir nuevo comentario */
 
@@ -954,7 +998,7 @@ parezca un bocadillo*/
 
     cursor: pointer;
     border-radius: 5px 5px 5px 5px;
-    
+
 }
 
 
@@ -992,7 +1036,7 @@ parezca un bocadillo*/
 }
 
 #objecion p{ font-size: 16px; }
-#objecion-añadido p{ font-size: 15px; }
+#objecion-aï¿½adido p{ font-size: 15px; }
 
 .container p{
 
@@ -1030,19 +1074,19 @@ parezca un bocadillo*/
 
 
 .entrada output img{ width: 700px; }
- 
+
 
 
 
 
 
                  /* envio de imagenes y gift */
-                            
+
 
 
 
 .votadoPos{
-   
+
     background: #FFD700;
 }
 

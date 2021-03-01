@@ -1,11 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ExampleController;
-use App\Http\Controllers\UltimosController;
-use App\Http\Controllers\VinietasController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegistroController;
+use App\Http\Controllers\ControlDataController;
+use App\Http\Controllers\Session\LoginController;
+use App\Http\Controllers\Session\RegistroController;
+use App\Http\Controllers\Vinietas\SendVinietaController;
+use App\Http\Controllers\Vinietas\ListaVinController;
+use App\Http\Controllers\Vinietas\ComentController;
+use App\Http\Controllers\Usuarios\PerfilesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,5 +46,59 @@ Route::post('/signUp/createUser', [RegistroController::class, 'signUp']);
 /**
  * Screen ULTIMOS
  */
-Route::get('/ultimos', [UltimosController::class, 'show']);
-Route::get('/ultimos/{page}', [UltimosController::class, 'showPagination']);
+Route::get('/ultimos', [ListaVinController::class, 'showUltimos']);
+Route::get('/ultimos/page/{page}', [ListaVinController::class, 'showUltimosPagination']);
+
+
+/**
+ * Screen MEJORES
+ */
+Route::get('/mejores', [ListaVinController::class, 'showMejores']);
+Route::get('/mejores/page/{page}', [ListaVinController::class, 'showMejoresPagination']);
+
+
+/**
+ * Screen ENVIAR APORTE
+ */
+Route::get('/enviar', [SendVinietaController::class, 'show']);
+Route::get('/enviar/imagen', [SendVinietaController::class, 'showImage']);
+Route::get('/enviar/gif', [SendVinietaController::class, 'showGif']);
+
+
+/**
+ * VOTAR
+ */
+Route::post('/votar', [ControlDataController::class, 'votarAporte']);
+Route::post('/ultimos/votar', [ControlDataController::class, 'votarAporte']);
+
+
+/**
+ * PERFILES
+ */
+// Mi perfil
+Route::get('/perfil', [PerfilesController::class, 'miPerfil']);
+Route::get('/perfil/{usuario}', [PerfilesController::class, 'mostrarPerfil']);
+// Cambiar avatar
+Route::get('/perfil/setPerfil/{numPoke}', [PerfilesController::class, 'setPerfil']);
+
+
+
+
+/**
+ * Comentarios
+ */
+// show screen comentarios
+Route::get('/cajaComentarios/{vin}', [ComentController::class, 'show']);
+
+
+
+
+
+
+
+/**
+ * Control
+ * Controladores que realizan gestion dentro de la pagina
+ */
+Route::post('/control/subirImg', [ControlDataController::class, 'subirImg']);
+Route::post('/asd', [ControlDataController::class, 'subirImg']);
