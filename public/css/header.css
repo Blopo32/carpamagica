@@ -1,0 +1,455 @@
+/*
+    Archivo que contiene el estilo del hader
+    Logo CarpamagiK, título, login/logout y menu de navecaion
+*/
+
+
+
+                                                    /**********************/
+                                                    /**  ICONO Y TITULO  **/
+                                                    /**********************/
+
+
+#header_cuenta{
+    margin: 0 auto;
+    max-width: 1170px;
+    height: 100px;
+}
+/* logo carpamagik */
+#iconoHome{
+    margin-left: 3px;
+    float: left;
+}
+#iconoHome img{
+    height: 96px;
+}
+/* titulo carpamagik */
+#titulo{
+    float: left;
+    margin: 0 auto;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+#titulo img{
+    width: 650px;
+}
+
+
+/* Screen 992px - 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    #header_cuenta{
+        max-width: 970px;
+        height: 85px;
+    }
+    #iconoHome img{
+        height: 82px;
+    }
+    #titulo{
+        margin-left: 15px;
+        margin-top: 10px;
+    }
+    #titulo img{
+        width: 500px;
+    }
+}
+/* Screen 768px - 991px */
+@media screen and (min-width: 768px) and (max-width: 991px){
+    #header_cuenta{
+        max-width: 750px;
+        height: 75px;
+    }
+    #iconoHome img{
+        height: 72px;
+    }
+    #titulo{
+        margin-left: 5px;
+        margin-top: 12px;
+    }
+    #titulo img{
+        width: 400px;
+    }
+}
+/* Screen 615px - 767px */
+@media screen and (min-width: 615px) and (max-width: 767px){
+    #header_cuenta{
+        max-width: 610px;
+        height: 75px;
+    }
+    #iconoHome img{
+        height: 72px;
+    }
+    #titulo{
+        margin-left: 5px;
+        margin-top: 12px;
+    }
+    #titulo img{
+        width: 425px;
+    }
+}
+
+                                                    /**********************/
+                                                    /**  LOGIN / LOGOUT  **/
+                                                    /**********************/
+
+
+/* login */
+#login{
+    position: relative;
+    float: right;
+    margin-top: 35px;
+    width: 380px;
+}
+#login form p{
+    margin: 0;
+    display: inline-block;
+}
+/* campos user / pass */
+#login form input[type=text], #login form input[type=password]{
+    background: aliceblue;
+    padding-left: 8px;
+    padding-right: 5px;
+    display: inline-block;
+    border-style: outset;
+    border-color: darkturquoise;
+    border-radius: 8px;
+    border-width: 3px;
+    width: 115px;
+    height: 25px;
+}
+#login form input[type=text]:focus, #login form input[type=password]:focus{
+    background: white;
+    outline: 0px;
+    border-color: #2527B2;
+}
+#login form div input[type=submit]{
+    background: #2527B2;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 2px;
+    width: 70px;
+    height: 32px;
+}
+/* boton login */
+#login form div input[type=submit]:hover{
+    cursor: pointer;
+}
+#login form{
+    float: right;
+    margin-right: 5%;
+}
+/* text REGISTRATE */
+#sin_cuenta{
+    font-family: serif;
+    padding-left: 8px;
+    font-size: 16dp;
+    width: 100%;
+    font-size: 1.4em;
+}
+/* logout */
+#logout{
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 0;
+    width: 380px;
+    float: right;
+}
+#perfil_name{
+    display: inline-block;
+    margin-right: 15px;
+}
+#perfil_name p{
+    margin: 0;
+    font-family: Droid;
+    font-size: 26px;
+    text-align: right;
+    width: 180px;
+}
+#welcome{
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+}
+/* imagen de perfil */
+#welcome img{
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+#welcome img:hover{
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+div.avatarOption img:hover{
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+div#div_autor img:hover{
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+/*  boton logout */
+#form_logout{ display: inline-block; }
+#form_logout form{ padding: 0; }
+#form_logout form button{
+    background: transparent;
+    border: 0;
+    width: 45px;
+    height: 45px;
+}
+#form_logout form button img{
+    width: 100%;
+    height: 100%;
+}
+#form_logout form button img:hover{ cursor: pointer; }
+
+
+/* Screen 992px - 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    #login{
+        width: 330px;
+        margin-top: 25px;
+    }
+    #sin_cuenta{
+        font-size: 1.3em;
+    }
+    #login form input[type=text], #login form input[type=password]{
+        width: 100px;
+        height: 22px;
+
+    }
+    #login form div input[type=submit]{
+        width: 60px;
+        height: 30px;
+    }
+}
+/* Screen 768px - 991px */
+@media screen and (min-width: 768px) and (max-width: 991px){
+    #login{
+        width: 260px;
+        margin-top: 20px;
+        margin-left: 5px;
+    }
+    #login form{
+        margin-right: 0;
+    }
+    #sin_cuenta{
+        font-size: 1.2em;
+    }
+    #login form input[type=text], #login form input[type=password]{
+        width: 95px;
+        height: 20px;
+
+    }
+    #login form div input[type=submit]{     /* Cambia boton login por flecha azul */
+        width: 0;
+        height: 0;
+        background: transparent;
+        border-left: 12px solid #2527B2;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-radius: 0px;
+    }
+    .bubble-float-left::before{             /* desactiva la animacion del boton login */
+        visibility: hidden;
+    }.bubble-float-left:hover, .bubble-float-left:focus, .bubble-float-left:active {
+        -webkit-transform: none;
+        transform: none;
+    }
+    .bubble-float-left:hover:before, .bubble-float-left:focus:before, .bubble-float-left:active:before {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+/* Screen 615px - 767px */
+@media screen and (min-width: 615px) and (max-width: 767px){
+    #login{
+        width: 80px;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    #login form{
+        margin-right: 35%;
+
+    }
+    #login form p{
+        display: none;
+
+    }
+    #login form div input[type=submit]{
+        width: 60px;
+        height: 60px;
+        border-radius: 1000px;
+    }
+    .bubble-float-left::before{             /* desactiva la animacion del boton login */
+        visibility: hidden;
+    }.bubble-float-left:hover, .bubble-float-left:focus, .bubble-float-left:active {
+        -webkit-transform: none;
+        transform: none;
+    }
+    .bubble-float-left:hover:before, .bubble-float-left:focus:before, .bubble-float-left:active:before {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+
+                                                    /***********************/
+                                                    /**  MENU NAVEGACION  **/
+                                                    /***********************/
+
+
+/* menu de navegacion */
+nav {
+    background-color: #6C69FD;
+    position: relative;
+    margin: 0 auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+nav ul{
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0;
+}
+nav li {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.18em;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: all 500ms ease;
+    -khtml-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+nav li:hover{
+    background-color: #2411F0;
+}
+nav a{
+    outline: none;
+    color: white;
+    text-decoration: none;
+}
+
+/* barra de búsqueda */
+#busqueda_container{
+    float: right;
+}
+#busqueda_container_container form{
+    position: relative;
+    margin: 3px 110px 0px 0px;
+}
+#busqueda_container_container input{
+    width: 150px;
+    border: 0;
+    font-size: 14px;
+    padding: 8px 35px 8px 8px;
+    float: left;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 5px;
+}
+#busqueda_container_container input{
+    height: 18px;
+    background: white;
+    outline: 0px;
+    border-color: #2527B2;
+}
+#busqueda_container_container button:hover{
+    cursor: pointer;
+}
+#busqueda_container_container button{
+    display: block;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 0;
+    font-size: 12px;
+    color: #bbb;
+    background: none;
+    box-sizing: border-box;
+}
+
+
+/* Screen 992px - 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    nav ul{
+        width: 970px;
+        font-size: 12px;
+    }
+    #busqueda_container_container form{
+        margin: 2px 90px 0px 0px;
+    }
+    #busqueda_container_container input{
+        width: 135px;
+        height: 15px;
+    }
+}
+/* Screen 768px - 991px */
+@media screen and (min-width: 768px) and (max-width: 991px){
+    nav ul{
+        width: 750px;
+        font-size: 10px;
+    }
+    #busqueda_container_container form{
+        margin: 2px 30px 0px 0px;
+    }
+    #busqueda_container_container input{
+        width: 125px;
+        height: 10px;
+    }
+    #busqueda_container_container button{
+        top: 0;
+        width: 30px;
+        height: 28px;
+    }
+    #busqueda_container_container button img{
+        width: 21px;
+        height: 20px;
+    }
+}
+/* Screen 615px - 767px */
+@media screen and (min-width: 615px) and (max-width: 767px){
+    nav ul{
+        max-width: 610px;
+        font-size: 9px;
+    }
+    #busqueda_container_container form{
+        margin: 1px 30px 0px 0px;
+    }
+    #busqueda_container_container input{
+        width: 125px;
+        height: 9px;
+    }
+    #busqueda_container_container button{
+        top: 0;
+        width: 30px;
+        height: 28px;
+    }
+    #busqueda_container_container button img{
+        width: 21px;
+        height: 20px;
+    }
+
+}

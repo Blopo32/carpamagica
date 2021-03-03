@@ -9,8 +9,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     {{-- <link href="{{ url('/css/newcss.css') }}" rel="stylesheet" type="text/css"> --}}
-    <link href="{{ asset('/css/newcss.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/animaciones.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/css/newcss.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/css/header.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('/css/fonts.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/estilos_predeterminados.css') }}" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/png" sizes="36x36" href="{{ url('/images/recursos/favicon.png') }}">
@@ -21,8 +22,8 @@
 @section('header')
 
     <div id ="header_cuenta">
-        <a href="{{ url('/') }}" id="iconoHome"><img src="{{ url('/images/recursos/carpa_meme.png') }}" alt="#" width="96" height="96" id="simbolo"></a>
-        <p id = "titulo"><img src="{{ url('/images/recursos/carpa_title.png') }}" alt="#" width="550" height="96"></p>
+        <a id="iconoHome" href="{{ url('/') }}"><img id="simbolo" src="{{ url('/images/recursos/carpa_meme.png') }}" alt="#" width="auto" height="96"></a>
+        <p id = "titulo"><img src="{{ url('/images/recursos/carpa_title.png') }}" alt="#" width="650" height="auto"></p>
 
         <!-- Si el usuario esta logueado le da la bienvenida -->
         @if(SessionControl::isSessionActive())
@@ -37,7 +38,7 @@
                 <div id="form_logout">
                     <form method='POST' action="{{ url('/logout') }}">
                         @csrf
-                        <button type="submit" name='logout' value='logout'><img src="{{ url('/images/recursos/exit_kof.png') }}" alt="#"></button>
+                        <button type="submit" name='logout' value='logout'><img src="{{ url('/images/recursos/exit.png') }}" alt="#"></button>
                     </form>
                 </div>
             </div>
